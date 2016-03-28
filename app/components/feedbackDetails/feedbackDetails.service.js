@@ -1,9 +1,9 @@
 ;(function() {
     
-    function FeedbackDetailsService(_) {
-        this.prepareFilterData = function(data) {
+    function feedbackDetailsService(_) {
+        this.prepareFilterData = function(items) {
             var prop = 'rating';
-            var uniqRatings = _.uniq(data.items, prop);
+            var uniqRatings = _.uniq(items, prop);
             var ratingsValues = _.pluck(uniqRatings, prop);
 
             return _.map(ratingsValues, function(item) {
@@ -26,11 +26,11 @@
             });
         };
 
-        this.toggleTable = function(data) {
+        this.toggleTable = function(data, items) {
             var tempObject = {checked: false};
             var toggledItems = _.where(data.filterItems, tempObject);
 
-            data.tableItems = data.items;
+            data.tableItems = items;
 
             _.each(toggledItems, function(item) {
                 var prop = 'rating';
@@ -45,5 +45,5 @@
     
     angular
         .module('dashboard.feedbackDetails')
-        .service('FeedbackDetailsService', FeedbackDetailsService);
+        .service('feedbackDetailsService', feedbackDetailsService);
 })();

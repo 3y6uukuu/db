@@ -1,6 +1,6 @@
 ;(function() {
-    function _() {
-        return window._;
+    function _($window) {
+        return $window._;
     }
 
     angular

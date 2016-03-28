@@ -7,8 +7,8 @@
                 controller: 'DashboardController',
                 templateUrl: 'components/dashboard/dashboard.view.html',
                 resolve: {
-                    store: function(DashboardService) {
-                        return DashboardService.getData();
+                    store: function(dashboardService) {
+                        return dashboardService.getData();
                     }
                 }
             };

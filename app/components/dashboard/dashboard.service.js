@@ -1,17 +1,16 @@
 ;(function() {
 
-    function DashboardService($http) {
+    function dashboardService($http, SERVICE_URL) {
         this.getData = function() {
             return $http({
                 method: 'GET',
-                url: 'http://cache.usabilla.com/example/apidemo.json'
-            }).then(function(module) {
-                return module;
+                url: SERVICE_URL
             });
         };
     }
 
     angular
         .module('dashboard.dashboard')
-        .service('DashboardService', DashboardService);
+        .constant('SERVICE_URL', 'http://cache.usabilla.com/example/apidemo.json')
+        .service('dashboardService', dashboardService);
 })();

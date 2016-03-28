@@ -1,18 +1,18 @@
 ;(function() {
 
-    function FeedbackDetailsController($scope, FeedbackDetailsService) {
-        this.service = FeedbackDetailsService;
+    function FeedbackDetailsController($scope, feedbackDetailsService) {
+        this.service = feedbackDetailsService;
+
+        var items = $scope.items;
 
         this.data = {
-            items:  $scope.items,
-            tableItems: $scope.items
+            filterItems: this.service.prepareFilterData(items),
+            tableItems: items
         };
-
-        this.data.filterItems = this.service.prepareFilterData(this.data);
 
         this.applyFilter = function(value) {
             this.service.toggleFilter(this.data, value);
-            this.service.toggleTable(this.data);
+            this.service.toggleTable(this.data, items);
         };
     }
 

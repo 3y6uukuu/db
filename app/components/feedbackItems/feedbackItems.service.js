@@ -1,8 +1,8 @@
 ;(function() {
 
     function FeedbackItemsService(_) {
-        this.prepareFeedbackItems = function(data) {
-            return _.countBy(data.items, 'rating');
+        this.prepareFeedbackItems = function(items) {
+            return _.countBy(items, 'rating');
         };
     }
 

@@ -1,8 +1,8 @@
 ;(function() {
-    function moment(LOCALE) {
-        window.moment.locale(LOCALE);
+    function moment($window, LOCALE) {
+        $window.moment.locale(LOCALE);
 
-        return window.moment;
+        return $window.moment;
     }
 
     angular

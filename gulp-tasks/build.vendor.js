@@ -10,6 +10,8 @@ var plugins = require('./plugins');
 var utils = require('./utils');
 var config = require('./config');
 
+var autoprefixer = require('autoprefixer');
+
 // Vendor:Clean:Scripts
 
 function cleanScripts() {
@@ -58,8 +60,16 @@ function cleanStyles() {
 // Vendor:Build:Styles
 
 function lazyCssTask(destFile) {
+
     var pipe = lazypipe()
         .pipe(plugins.sourcemaps.init)
+        .pipe(function() {
+            var processors = [
+                autoprefixer({browsers: ['last 1 versions']})
+            ];
+
+            return plugins.postcss(processors);
+        })
         .pipe(plugins.concat, destFile)
         .pipe(function() {
             return plugins.if(config.isProduction, plugins.minifyCss());

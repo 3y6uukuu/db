@@ -1,12 +1,14 @@
 ;(function() {
 
-    function GraphService(_, moment, DATE_FORMAT) {
-        this.sortByCreationDate = function(data) {
-            return _.sortBy(data.items, 'creation_date');
+    function graphService(_, moment, DATE_FORMAT) {
+        this.sortByCreationDate = function(items) {
+            var prop = 'creation_date';
+
+            return _.sortBy(items, prop);
         };
 
-        this.groupeByDay = function(data) {
-            return _.groupBy(data.items, function(item) {
+        this.groupeByDay = function(items) {
+            return _.groupBy(items, function(item) {
                 return moment.unix(item.creation_date).startOf('day').format(DATE_FORMAT);
             });
         };
@@ -21,7 +23,8 @@
             _.each(groupedByDay, function(value, key) {
                 data.xAxisLabels.push(key);
 
-                var ratingsPerDay = _.pluck(value, 'rating');
+                var prop = 'rating';
+                var ratingsPerDay = _.pluck(value, prop);
                 var averageDayRating = getAverageFromArray(ratingsPerDay).toFixed(2);
 
                 data.yAxisLabels[0].push(averageDayRating);
@@ -32,5 +35,5 @@
     angular
         .module('dashboard.graph')
         .constant('DATE_FORMAT', 'DD MMM')
-        .service('GraphService', GraphService);
+        .service('graphService', graphService);
 })();
