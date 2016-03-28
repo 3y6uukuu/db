@@ -1,0 +1,30 @@
+<table>
+    <tr>
+        <th scope="col">Rating</th>
+        <th scope="col">Comment</th>
+        <th scope="col">Browser</th>
+        <th scope="col">Device</th>
+        <th scope="col">Platform</th>
+    </tr>
+
+    <tr ng-repeat="item in scopedItems | orderBy: 'rating'">
+        <td>
+            {{item.rating}}
+        </td>
+        <td>
+            <p>{{item.comment}}</p>
+        </td>
+        <td>
+            {{item.computed_browser.Browser}}<br>
+            {{item.computed_browser.Version}}
+        </td>
+        <td ng-switch on="item.computed_browser.Platform">
+            <span ng-switch-when="Android">Mobile</span>
+            <span ng-switch-when="iOS">Mobile</span>
+            <span ng-switch-default>Desktop</span>
+        </td>
+        <td>
+            {{item.computed_browser.Platform}}
+        </td>
+    </tr>
+</table>

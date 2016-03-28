@@ -1,0 +1,5 @@
+<div ng-repeat="item in scopedFilterItems | orderBy: 'rating'">
+    <label for="filter-button-{{item.rating}}">{{item.rating}}</label>
+    <input type="checkbox" id="filter-button-{{item.rating}}" ng-click="handler({item: item.rating})" ng-checked="item.checked">
+</div>
+

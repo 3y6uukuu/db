@@ -1,0 +1,30 @@
+{
+    "name": "Dashboard",
+    "description": "Dashboard test task",
+    "main": "",
+    "authors": [
+        "Denys Zubitskyi"
+    ],
+    "ignore": [
+        "**/.*",
+        "node_modules",
+        "bower_components"
+    ],
+    "dependencies": {
+        "angular": "1.4.9",
+        "angular-route": "1.4.9",
+        "angular-chart.js": "0.9.0",
+        "underscore": "1.8.3",
+        "moment": "2.12.0"
+    },
+    "overrides": {
+        "moment": {
+            "main": [
+                "min/moment.min.js",
+                "locale/nl.js"
+            ]
+        }
+    },
+    "appPath": "app",
+    "moduleName": "dashboardApp"
+}

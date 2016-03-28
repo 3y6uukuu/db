@@ -1,0 +1,20 @@
+<table>
+    <thead>
+        <tr>
+            <th scope="col">Rating</th>
+            <th scope="col"># items</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr ng-repeat="(rating, count) in feedbackItemsCtrl.data.feedbackItems" ng-switch on="rating">
+            <td>
+                <span ng-switch-when="1">Very Bad</span>
+                <span ng-switch-when="2">Bad</span>
+                <span ng-switch-when="3">Average</span>
+                <span ng-switch-when="4">Good</span>
+                <span ng-switch-when="5">Amazing!</span>
+            </td>
+            <td>{{::count}}</td>
+        </tr>
+    </tbody>
+</table>
