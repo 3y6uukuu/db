@@ -3,7 +3,7 @@
     function feedbackDetailsSearchDirective() {
         return {
             restrict: 'E',
-            templateUrl: 'components/feedbackDetails/ratingsDetailsSearch/ratingsDetailsSearch.view.html',
+            templateUrl: 'components/dashboard/feedbackDetails/ratingsDetailsSearch/ratingsDetailsSearch.view.html',
             scope: {
                 scopedSearchItems: '=searchItems',
                 handler: '&onSearch'

@@ -3,7 +3,7 @@
     function feedbackDetailsTableDirective() {
         return {
             restrict: 'E',
-            templateUrl: 'components/feedbackDetails/feedbackDetailsTable/feedbackDetailsTable.view.html',
+            templateUrl: 'components/dashboard/feedbackDetails/feedbackDetailsTable/feedbackDetailsTable.view.html',
             scope: {
                 scopedItems: '=tableItems'
             }

@@ -1,9 +1,9 @@
 ;(function() {
 
-    function GraphController($scope, graphService) {
+    function GraphController(graphService) {
         this.service = graphService;
 
-        var items = $scope.items;
+        var items = this.scopedItems;
 
         items = this.service.sortByCreationDate(items);
         

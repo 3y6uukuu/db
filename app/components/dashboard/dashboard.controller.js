@@ -1,7 +1,7 @@
 ;(function() {
 
-    function DashboardController($scope, store) {
-        $scope.items = store.data.items;
+    function DashboardController(store) {
+        this.items = store.data.items;
     }
 
     angular

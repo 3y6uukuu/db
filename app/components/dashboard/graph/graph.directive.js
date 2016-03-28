@@ -3,10 +3,13 @@
     function graphDirective() {
         return {
             restrict: 'E',
-            templateUrl: 'components/graph/graph.view.html',
+            templateUrl: 'components/dashboard/graph/graph.view.html',
             controller: 'GraphController',
             controllerAs: 'graphCtrl',
-            bindToController: true
+            bindToController: true,
+            scope: {
+                scopedItems: '=items'
+            }
         };
     }
 

@@ -1,9 +1,9 @@
 ;(function() {
 
-    function FeedbackDetailsController($scope, feedbackDetailsService) {
+    function FeedbackDetailsController(feedbackDetailsService) {
         this.service = feedbackDetailsService;
 
-        var items = $scope.items;
+        var items = this.scopedItems;
 
         this.data = {
             filterItems: this.service.prepareFilterData(items),

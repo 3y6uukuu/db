@@ -3,9 +3,13 @@
     function feedbackItemsDirective() {
         return {
             restrict: 'E',
-            templateUrl: 'components/feedbackItems/feedbackItems.view.html',
+            templateUrl: 'components/dashboard/feedbackItems/feedbackItems.view.html',
             controller: 'FeedbackItemsController',
-            controllerAs: 'feedbackItemsCtrl'
+            controllerAs: 'feedbackItemsCtrl',
+            bindToController: true,
+            scope: {
+                scopedItems: '=items'
+            }
         };
     }
 
