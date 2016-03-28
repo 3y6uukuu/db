@@ -1,20 +1,20 @@
-<table>
+<table class="feedback-items">
     <thead>
         <tr>
-            <th scope="col">Rating</th>
-            <th scope="col"># items</th>
+            <th class="feedback-items__header feedback-items__header_rating" scope="col">Rating</th>
+            <th class="feedback-items__header feedback-items__header_items" scope="col"># items</th>
         </tr>
     </thead>
     <tbody>
         <tr ng-repeat="(rating, count) in feedbackItemsCtrl.data.feedbackItems" ng-switch on="rating">
-            <td>
-                <span ng-switch-when="1">Very Bad</span>
-                <span ng-switch-when="2">Bad</span>
-                <span ng-switch-when="3">Average</span>
-                <span ng-switch-when="4">Good</span>
-                <span ng-switch-when="5">Amazing!</span>
+            <td class="feedback-items__data">
+                <span ng-switch-when="1"><span class="feedback-items__rating">1</span>Very Bad</span>
+                <span ng-switch-when="2"><span class="feedback-items__rating">2</span> Bad</span>
+                <span ng-switch-when="3"><span class="feedback-items__rating">3</span>Average</span>
+                <span ng-switch-when="4"><span class="feedback-items__rating">4</span>Good</span>
+                <span ng-switch-when="5"><span class="feedback-items__rating">5</span>Amazing!</span>
             </td>
-            <td>{{::count}}</td>
+            <td class="feedback-items__data feedback-items__data_count">{{::count}}</td>
         </tr>
     </tbody>
 </table>

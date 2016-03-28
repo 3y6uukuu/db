@@ -1,7 +1,9 @@
-<div>
-    <feedback-items items="dashboardCtrl.items"></feedback-items>
+<div class="dashboard">
+    <div class="panel">
+        <feedback-items class="panel__a-side" items="dashboardCtrl.items"></feedback-items>
 
-    <graph items="dashboardCtrl.items"></graph>
+        <graph class="panel__b-side" items="dashboardCtrl.items"></graph>
+    </div>
+
+    <feedback-details items="dashboardCtrl.items"></feedback-details>
 </div>
-
-<feedback-details items="dashboardCtrl.items"></feedback-details>

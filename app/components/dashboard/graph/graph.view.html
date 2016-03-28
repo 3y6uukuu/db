@@ -1,5 +1,7 @@
-<canvas class="chart chart-line"
-        chart-data="graphCtrl.data.yAxisLabels"
-        chart-labels="graphCtrl.data.xAxisLabels"
-        chart-options="{bezierCurve: false, scaleShowVerticalLines: false, datasetFill: false, responsive: true, scaleLabel: '<div class=circle><%=value%></div>'}">
-</canvas>
+<div class="graph">
+    <canvas class="chart chart-line"
+            chart-data="graphCtrl.data.yAxisLabels"
+            chart-labels="graphCtrl.data.xAxisLabels"
+            chart-options="{bezierCurve: false, scaleShowVerticalLines: false, datasetFill: false, responsive: true, scaleLabel: '<%=value%>'}">
+    </canvas>
+</div>

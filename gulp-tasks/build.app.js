@@ -11,6 +11,9 @@ var config = require('./config');
 
 var bowerJson = require('../bower.json');
 
+var postcssCssnext  = require('postcss-cssnext');
+// var postcssBem  = require('postcss-bem');
+var lost = require('lost');
 
 // App:Clean:Scripts
 
@@ -87,13 +90,20 @@ gulp.task('app:build:scripts', function () {
 
 // App:Build:Styles
 
-function lazyLessTask(destFile) {
+function lazyCssTask(destFile) {
     var cacheName = 'app.build.styles.' + destFile;
+
+    var processors = [
+        postcssCssnext,
+        // postcssBem,
+        lost
+    ];
 
     var pipe = lazypipe()
         .pipe(plugins.cached, cacheName)
         .pipe(plugins.sourcemaps.init)
         .pipe(plugins.concat, destFile)
+        .pipe(plugins.postcss, processors)
         .pipe(plugins.remember, cacheName)
         .pipe(function () {
             return plugins.if(config.isProduction, plugins.minifyCss());
@@ -107,12 +117,12 @@ function stylesTask(moduleName, styleFiles, destDir) {
     var destFile = moduleName + '.css';
 
     return gulp.src(styleFiles)
-        .pipe(lazyLessTask(destFile))
+        .pipe(lazyCssTask(destFile))
         .pipe(gulp.dest(destDir));
 }
 
 function stylesPerAppTask() {
-    var styleFiles = path.join(config.app, '**/*.css');
+    var styleFiles = path.join(config.app, '**/*.cssnext');
 
     return stylesTask(bowerJson.moduleName, styleFiles, config.build);
 }

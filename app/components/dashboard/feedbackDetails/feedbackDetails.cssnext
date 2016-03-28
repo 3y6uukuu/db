@@ -1,0 +1,21 @@
+.feedback-details {
+    margin-top: 36px;
+
+    & .feedback-details__panel {
+        lost-utility: clearfix;
+
+        & .feedback-details__a-side {
+            lost-column: 1/5;
+            display: block;
+        }
+
+        & .feedback-details__b-side {
+            display: block;
+        }
+    }
+
+    & .feedback-details__content {
+        margin-top: 22px;
+        display: block;
+    }
+}

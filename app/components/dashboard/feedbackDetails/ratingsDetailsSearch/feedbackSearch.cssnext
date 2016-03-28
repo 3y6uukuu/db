@@ -1,0 +1,15 @@
+.feedback-details-search {
+    background-color: white;
+    border: 1px solid var(--lightGray);
+    display: inline-block;
+    width: 99%;
+    height: 24px;
+    padding: 4px 8px;
+    margin: 0;
+    font-size: 14px;
+    line-height: 20px;
+    color: var(--gray);
+    vertical-align: middle;
+    border-radius: var(--borderRadius);
+    font-weight: normal;
+}

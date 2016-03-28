@@ -1,6 +1,8 @@
-<div>
-    <feedback-details-search></feedback-details-search>
-    <feedback-details-filter filter-items="feedbackDetailsCtrl.data.filterItems" on-filter-toggle="feedbackDetailsCtrl.applyFilter(item)"></feedback-details-filter>
-</div>
+<div class="feedback-details">
+    <div class="feedback-details__panel">
+        <feedback-details-search class="feedback-details__a-side"></feedback-details-search>
+        <feedback-details-filter class="feedback-details__b-side" filter-items="feedbackDetailsCtrl.data.filterItems" on-filter-toggle="feedbackDetailsCtrl.applyFilter(item)"></feedback-details-filter>
+    </div>
 
-<feedback-details-table table-items="feedbackDetailsCtrl.data.tableItems"></feedback-details-table>
+    <feedback-details-table class="feedback-details__content" table-items="feedbackDetailsCtrl.data.tableItems"></feedback-details-table>
+</div>

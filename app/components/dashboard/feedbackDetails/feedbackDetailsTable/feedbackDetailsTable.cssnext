@@ -1,0 +1,94 @@
+.feedback-details-table {
+    width: 100%;
+    border-spacing: 0;
+    border-collapse: collapse;
+    vertical-align: middle;
+    box-shadow: var(--boxShadow);
+    text-align: center;
+
+    & thead {
+        background-color: #586369;
+    }
+
+    & .feedback-details-table__header {
+        color: white;
+        font-weight: normal;
+        border: none;
+        padding: 18px 0;
+    }
+
+    & .feedback-details-table__header_comment {
+        text-align: left;
+    }
+
+    & .feedback-details-table__header:first-child {
+        border-radius: var(--borderRadius) 0 0 0;
+    }
+
+    & .feedback-details-table__header:last-child {
+        border-radius: 0 var(--borderRadius) 0 0;
+    }
+
+    & tbody {
+        background-color: white;
+    }
+
+    & .feedback-details-table__data {
+        border: none;
+        padding: 16px 2%;
+        border-bottom: 3px solid var(--cleanGray);
+    }
+
+    & .feedback-details-table__data_rating {
+        width: 4%;
+        padding: 0 2%;
+
+        & .feedback-details-table__rating {
+            display: inline-block;
+            line-height: 32px;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            text-align: center;
+            background-color: var(--lightBlue);
+            border-color: var(--blue);
+            color: white;
+        }
+    }
+
+    & .feedback-details-table__data_comment {
+        text-align: left;
+    }
+
+    & .feedback-details-table__data_device {
+        width: 12%;
+    }
+
+    & .feedback-details-table__data_browser {
+        width: 12%;
+    }
+
+    & .feedback-details-table__data_device {
+        width: 12%;
+    }
+
+    & .feedback-details-table__data_platform {
+        width: 10%;
+    }
+
+    & tr:last-child {
+        & .feedback-details-table__data:first-child {
+            border-radius: 0 0 0 var(--borderRadius);
+        }
+
+        & .feedback-details-table__data:last-child {
+            border-radius: 0 0 var(--borderRadius) 0;
+        }
+
+        & .feedback-details-table__data {
+            border-bottom: none;
+        }
+    }
+
+
+}

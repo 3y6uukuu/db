@@ -1,0 +1,27 @@
+.dashboard {
+    lost-center: 1140px;
+
+    & .panel {
+
+        lost-utility: clearfix;
+        box-shadow: var(--boxShadow);
+        border-radius: var(--borderRadius);
+        background-color: white;
+        padding: 40px;
+
+        & .panel__a-side {
+            lost-column: 1/3;
+            display: block;
+        }
+
+        & .panel__b-side {
+            lost-column: 2/3;
+            display: block;
+        }
+    }
+
+    & .feedback-details {
+
+    }
+
+}

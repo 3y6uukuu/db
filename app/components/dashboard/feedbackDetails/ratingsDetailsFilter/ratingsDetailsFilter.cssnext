@@ -1,0 +1,35 @@
+.feedback-details-filter {
+    display: inline-block;
+    margin-right: 10px;
+
+    &:first-child {
+        margin-left: 20px;
+    }
+
+    & input[type="checkbox"] {
+        display: none;
+
+        & + .feedback-details-filter__rating {
+            background-color: transparent;
+            display: inline-block;
+            line-height: 32px;
+            width: 32px;
+            height: 32px;
+            border-radius: 50%;
+            border: 1px solid var(--lightGray);
+            text-align: center;
+        }
+
+        &:checked + .feedback-details-filter__rating {
+            background-color: var(--lightBlue);
+            border-color: var(--blue);
+            color: white;
+        }
+    }
+
+    & .feedback-details-filter__rating {
+        cursor: pointer;
+        color: var(--lightGray);
+    }
+}
+
