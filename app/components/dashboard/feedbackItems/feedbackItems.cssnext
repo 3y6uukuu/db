@@ -32,6 +32,12 @@
         text-align: right;
     }
 
+    & tr:last-child {
+        & .feedback-items__data {
+            border-bottom: none;
+        }
+    }
+
     & .feedback-items__rating {
         background-color: var(--lightBlue);
         border: 1px solid var(--blue);

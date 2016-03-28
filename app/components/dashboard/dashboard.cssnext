@@ -9,14 +9,26 @@
         background-color: white;
         padding: 40px;
 
-        & .panel__a-side {
-            lost-column: 1/3;
+        & .panel__a-side,
+        & .panel__b-side {
             display: block;
         }
 
-        & .panel__b-side {
-            lost-column: 2/3;
-            display: block;
+        @media (--bpMobile) or (--bpPhablet) {
+            & .panel__a-side ,
+            & .panel__b-side {
+                lost-column: 1;
+            }
+        }
+
+        @media (--bpTablet) {
+            & .panel__a-side {
+                lost-column: 1/3;
+            }
+
+            & .panel__b-side {
+                lost-column: 2/3;
+            }
         }
     }
 

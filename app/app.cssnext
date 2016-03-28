@@ -1,12 +1,17 @@
 :root {
     --borderRadius: 6px;
     --boxShadow: 0 1px 4px rgba(0,0,0,.065);
+
     --gray: #737679;
     --lightGray: #a1a7af;
     --cleanGray: #f9f9f9;
     --blue: #1c90b9;
     --lightBlue: #1d9fd1;
 }
+
+@custom-media --bpMobile (width <= 599px);
+@custom-media --bpPhablet (width >= 600px) and (width <= 959px);
+@custom-media --bpTablet (width >= 960px);
 
 body {
     background-color: #EEF4F5;

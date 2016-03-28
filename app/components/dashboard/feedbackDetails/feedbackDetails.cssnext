@@ -4,13 +4,29 @@
     & .feedback-details__panel {
         lost-utility: clearfix;
 
-        & .feedback-details__a-side {
-            lost-column: 1/5;
+        & .feedback-details__a-side,
+        & .feedback-details__b-side {
             display: block;
         }
 
-        & .feedback-details__b-side {
-            display: block;
+        @media (--bpMobile) {
+            & .feedback-details__a-side,
+            & .feedback-details__b-side {
+                lost-column: 1;
+            }
+        }
+
+        @media (--bpPhablet) {
+            & .feedback-details__a-side {
+                lost-column: 1/3;
+            }
+        }
+
+        @media (--bpTablet) {
+            & .feedback-details__a-side {
+                lost-column: 1/5;
+                white-space: nowrap;
+            }
         }
     }
 

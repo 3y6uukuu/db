@@ -13,3 +13,9 @@
     border-radius: var(--borderRadius);
     font-weight: normal;
 }
+
+@media (--bpMobile) {
+    .feedback-details-search {
+        width: 96%;
+    }
+}

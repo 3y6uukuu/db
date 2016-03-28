@@ -2,8 +2,10 @@
     display: inline-block;
     margin-right: 10px;
 
-    &:first-child {
-        margin-left: 20px;
+    @media (--bpPhablet) or (--bpTablet) {
+        &:first-child {
+            margin-left: 20px;
+        }
     }
 
     & input[type="checkbox"] {
@@ -33,3 +35,8 @@
     }
 }
 
+@media (--bpMobile) {
+    .feedback-details-filter {
+        margin-top: 18px;
+    }
+}
