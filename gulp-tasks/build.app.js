@@ -12,7 +12,6 @@ var config = require('./config');
 var bowerJson = require('../bower.json');
 
 var postcssCssnext  = require('postcss-cssnext');
-// var postcssBem  = require('postcss-bem');
 var lost = require('lost');
 
 // App:Clean:Scripts
@@ -95,7 +94,6 @@ function lazyCssTask(destFile) {
 
     var processors = [
         postcssCssnext,
-        // postcssBem,
         lost
     ];
 

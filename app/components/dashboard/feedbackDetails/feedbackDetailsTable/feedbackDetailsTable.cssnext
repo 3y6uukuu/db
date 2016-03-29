@@ -37,7 +37,7 @@
     & .feedback-details-table__data {
         border: none;
         padding: 16px 2%;
-        border-bottom: 3px solid var(--cleanGray);
+        border-bottom: 2px solid var(--cleanGray);
     }
 
     & .feedback-details-table__data_rating {

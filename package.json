@@ -4,7 +4,6 @@
   "description": "Dashboard app",
   "private": true,
   "devDependencies": {
-    "autoprefixer": "^6.3.5",
     "del": "^2.2.0",
     "gulp": "^3.9.0",
     "gulp-add-src": "^0.2.0",
@@ -22,7 +21,6 @@
     "lazypipe": "^1.0.1",
     "lost": "^6.7.2",
     "main-bower-files": "^2.11.1",
-    "postcss-bem": "^0.4.1",
     "postcss-cssnext": "^2.5.1",
     "require-dir": "^0.3.0",
     "run-sequence": "^1.1.5"

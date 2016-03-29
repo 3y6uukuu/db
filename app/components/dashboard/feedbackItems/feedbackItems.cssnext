@@ -22,7 +22,7 @@
 
     & .feedback-items__data {
         border: none;
-        border-bottom: 3px solid var(--cleanGray);
+        border-bottom: 2px solid var(--cleanGray);
         padding: 8px 0;
         text-align: left;
         white-space: nowrap;

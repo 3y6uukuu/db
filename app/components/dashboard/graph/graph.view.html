@@ -1,7 +1,27 @@
 <div class="graph">
-    <canvas class="chart chart-line"
+    <canvas class="chart chart-line" height="244"
             chart-data="graphCtrl.data.yAxisLabels"
             chart-labels="graphCtrl.data.xAxisLabels"
-            chart-options="{bezierCurve: false, scaleShowVerticalLines: false, datasetFill: false, responsive: true, scaleLabel: '<%=value%>'}">
+            chart-colours="['#1aa4c9']"
+
+            chart-options="{
+                bezierCurve: false,
+                scaleShowVerticalLines: false,
+                datasetFill: false,
+                responsive: true,
+                pointDotRadius: 5,
+                scaleGridLineColor: '#f9f9f9',
+                scaleGridLineWidth: 2,
+                datasetStroke: false,
+                scaleFontSize: 14,
+                scaleFontColor: '#737679',
+                tooltipFillColor: '#586369',
+                tooltipFontColor: '#ffffff',
+                scaleLineColor: '#ffffff',
+                animationEasing: 'easeInOutQuad',
+                maintainAspectRatio: false
+            }">
     </canvas>
 </div>
+
+
