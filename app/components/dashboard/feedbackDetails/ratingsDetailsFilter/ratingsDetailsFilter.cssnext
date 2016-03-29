@@ -2,7 +2,7 @@
     display: inline-block;
     margin-right: 10px;
 
-    @media (--bpPhablet) or (--bpTablet) {
+    @media (--bpPhablet), (--bpTablet) {
         &:first-child {
             margin-left: 20px;
         }

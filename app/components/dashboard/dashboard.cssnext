@@ -2,7 +2,6 @@
     lost-center: 1140px;
 
     & .panel {
-
         lost-utility: clearfix;
         box-shadow: var(--boxShadow);
         border-radius: var(--borderRadius);
@@ -14,8 +13,8 @@
             display: block;
         }
 
-        @media (--bpMobile) or (--bpPhablet) {
-            & .panel__a-side ,
+        @media (--bpMobile), (--bpPhablet) {
+            & .panel__a-side,
             & .panel__b-side {
                 lost-column: 1;
             }
@@ -23,17 +22,12 @@
 
         @media (--bpTablet) {
             & .panel__a-side {
-                lost-column: 1/3;
+                lost-column: 1/4;
             }
 
             & .panel__b-side {
-                lost-column: 2/3;
+                lost-column: 3/4;
             }
         }
     }
-
-    & .feedback-details {
-
-    }
-
 }

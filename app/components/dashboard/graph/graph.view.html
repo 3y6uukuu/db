@@ -1,9 +1,12 @@
 <div class="graph">
+    <ol class="graph__custom-labels">
+        <li class="graph__custom-label" ng-repeat="label in graphCtrl.data.yAxisCustomLabels">{{label}}</li>
+    </ol>
+
     <canvas class="chart chart-line" height="244"
             chart-data="graphCtrl.data.yAxisLabels"
             chart-labels="graphCtrl.data.xAxisLabels"
             chart-colours="['#1aa4c9']"
-
             chart-options="{
                 bezierCurve: false,
                 scaleShowVerticalLines: false,
@@ -19,7 +22,8 @@
                 tooltipFontColor: '#ffffff',
                 scaleLineColor: '#ffffff',
                 animationEasing: 'easeInOutQuad',
-                maintainAspectRatio: false
+                maintainAspectRatio: false,
+                scaleShowLabels: false
             }">
     </canvas>
 </div>

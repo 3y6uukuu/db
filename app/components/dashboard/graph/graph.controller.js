@@ -11,7 +11,8 @@
 
         this.data = {
             xAxisLabels: [],
-            yAxisLabels: [[]]
+            yAxisLabels: [[]],
+            yAxisCustomLabels: []
         };
 
         this.service.prepareData(this.data, groupedByDay);
