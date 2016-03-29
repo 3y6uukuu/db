@@ -10,9 +10,13 @@
         }
 
         @media (--bpMobile) {
-            & .feedback-details__a-side,
+            & .feedback-details__a-side  {
+                lost-column: 1;
+            }
+
             & .feedback-details__b-side {
                 lost-column: 1;
+                margin-top: 18px;
             }
         }
 

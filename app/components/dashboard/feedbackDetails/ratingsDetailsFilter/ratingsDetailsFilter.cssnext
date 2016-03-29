@@ -35,8 +35,3 @@
     }
 }
 
-@media (--bpMobile) {
-    .feedback-details-filter {
-        margin-top: 18px;
-    }
-}

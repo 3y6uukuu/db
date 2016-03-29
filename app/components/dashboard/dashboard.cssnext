@@ -14,9 +14,13 @@
         }
 
         @media (--bpMobile), (--bpPhablet) {
-            & .panel__a-side,
+            & .panel__a-side {
+                lost-column: 1;
+            }
+
             & .panel__b-side {
                 lost-column: 1;
+                margin-top: 20px;
             }
         }
 
@@ -26,7 +30,7 @@
             }
 
             & .panel__b-side {
-                lost-column: 3/4;
+                lost-column: 2/3 2;
             }
         }
     }

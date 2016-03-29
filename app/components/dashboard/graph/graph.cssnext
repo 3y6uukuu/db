@@ -41,9 +41,3 @@
         margin-left: 20px;
     }
 }
-
-@media (--bpMobile), (--bpPhablet) {
-    .graph {
-        margin-top: 20px;
-    }
-}
